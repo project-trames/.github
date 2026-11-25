@@ -1,0 +1,24 @@
+name: Question / setup help
+description: Ask about setup, usage, or project documentation.
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Check the product README and existing issues first. Please ask in the repository for the product you use.
+  - type: textarea
+    id: question
+    attributes:
+      label: Your question
+      description: What are you trying to do, and where do you need help?
+    validations:
+      required: true
+  - type: input
+    id: environment
+    attributes:
+      label: Product and environment
+      description: Include the version, host OS/hardware, backend, and guest distribution if relevant.
+  - type: textarea
+    id: attempts
+    attributes:
+      label: What you have tried
+      description: Link documentation you followed and include relevant commands and errors. Remove private data.

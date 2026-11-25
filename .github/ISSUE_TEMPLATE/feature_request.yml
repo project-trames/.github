@@ -1,0 +1,27 @@
+name: Feature proposal
+description: Propose a capability or an improvement to an existing workflow.
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: The workflow or problem
+      description: What are you trying to accomplish, and what gets in the way?
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed behavior
+      description: Describe the result you want. Implementation ideas are welcome but optional.
+    validations:
+      required: true
+  - type: input
+    id: scope
+    attributes:
+      label: Affected product or platform
+      placeholder: Mac, iPad, Linux, Runtime, CLI, or organization documentation
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives and context
+      description: Existing workarounds, related issues, compatibility needs, or relevant upstream references.

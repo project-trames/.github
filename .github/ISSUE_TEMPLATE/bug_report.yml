@@ -1,0 +1,72 @@
+name: Bug report
+description: Report a reproducible failure or compatibility regression.
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for helping improve Trames. Report in the product where you encountered the problem; maintainers can help identify the responsible layer.
+        Keep secrets and security exploit details out of public reports. See the repository's Support guidance for sensitive reports.
+  - type: input
+    id: version
+    attributes:
+      label: Product and version
+      description: Include the release/build number or exact commit. For a source build, include Runtime/CLI pins if known.
+      placeholder: Trames Mac, version or commit
+    validations:
+      required: true
+  - type: input
+    id: host
+    attributes:
+      label: Host system
+      description: Device or machine, OS version, and CPU architecture.
+      placeholder: Mac, macOS version, Apple silicon
+    validations:
+      required: true
+  - type: dropdown
+    id: backend
+    attributes:
+      label: Execution backend
+      options:
+        - Not sure
+        - AArch64 interpreter
+        - HVF (Mac)
+        - KVM (Linux)
+        - Not applicable
+    validations:
+      required: true
+  - type: input
+    id: guest
+    attributes:
+      label: Guest environment and application
+      description: Distribution, architecture, application/package versions, and installation source, where relevant.
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Steps to reproduce
+      description: Include commands, inputs, and setup needed to reproduce from a known state.
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+      description: If you tested native Linux or an earlier Trames version, include the version and result.
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual behavior
+      description: Include the error, visible failure, or behavioral difference.
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Logs and evidence
+      description: Paste relevant text logs or attach screenshots. Remove secrets and personal data first.
+  - type: textarea
+    id: regression
+    attributes:
+      label: Regression or additional context
+      description: Last known working version, frequency, workarounds, or related issues.
